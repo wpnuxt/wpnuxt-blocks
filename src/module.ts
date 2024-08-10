@@ -27,9 +27,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.alias['#wpnuxt/blocks'] = resolve(nuxt.options.buildDir, 'wpnuxt/blocks')
 
-    await installModule('@nuxt/ui', {
-      icons: ['heroicons', 'uil', 'mdi']
-    })
+    await installModule('@nuxt/ui')
     await installModule('@nuxt/image', {
       domains: ['wordpress.wpnuxt.com']
     })
