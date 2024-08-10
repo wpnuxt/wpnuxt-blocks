@@ -6,9 +6,5 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate"
-  },
-  "dependencies": {
-    "@vernaillen/wpnuxt": "^1.0.0-edge.0",
-    "nuxt": "^3.12.4"
   }
 }
