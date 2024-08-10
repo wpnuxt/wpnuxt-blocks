@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     frontendUrl: 'https://demo.wpnuxt.com',
     logLevel: 4
   },
+  future: {
+    compatibilityVersion: 4
+  },
   devtools: { enabled: true },
   compatibilityDate: '2024-08-08'
 })
