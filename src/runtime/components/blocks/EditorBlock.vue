@@ -7,5 +7,5 @@ defineProps<{
 </script>
 
 <template>
-  <p v-sanitize="block.renderedHtml" />
+  <div v-sanitize="block.renderedHtml" />
 </template>

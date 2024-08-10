@@ -1,5 +1,5 @@
-import fs from 'node:fs'
-import { defineNuxtModule, createResolver, addComponentsDir, addComponent, addTemplate } from '@nuxt/kit'
+import { promises as fsp } from 'node:fs'
+import { defineNuxtModule, installModule, createResolver, addComponentsDir, addComponent, addTemplate } from '@nuxt/kit'
 import { genDynamicImport } from 'knitwork'
 import type { Component } from '@nuxt/schema'
 import { name, version } from '../package.json'
@@ -23,6 +23,13 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.alias['#wpnuxt/blocks'] = resolve(nuxt.options.buildDir, 'wpnuxt/blocks')
 
+    await installModule('@nuxt/ui', {
+      icons: ['heroicons', 'uil', 'mdi']
+    })
+    await installModule('@nuxt/image', {
+      domains: ['wordpress.wpnuxt.com']
+    })
+
     addComponentsDir({
       path: resolveRuntimeModule('./components/blocks'),
       pathPrefix: false,
@@ -34,7 +41,7 @@ export default defineNuxtModule<ModuleOptions>({
     for (const layer of _layers) {
       const srcDir = layer.config.srcDir
       const blockComponents = resolve(srcDir, 'components/blocks')
-      const dirStat = await fs.promises.stat(blockComponents).catch(() => null)
+      const dirStat = await fsp.stat(blockComponents).catch(() => null)
       if (dirStat && dirStat.isDirectory()) {
         nuxt.hook('components:dirs', (dirs) => {
           dirs.unshift({
@@ -49,25 +56,6 @@ export default defineNuxtModule<ModuleOptions>({
     addComponent({ name: 'BlockComponent', filePath: resolveRuntimeModule('./components/BlockComponent') })
     addComponent({ name: 'BlockInfo', filePath: resolveRuntimeModule('./components/BlockInfo') })
     addComponent({ name: 'BlockRenderer', filePath: resolveRuntimeModule('./components/BlockRenderer') })
-
-    // TODO: how to correctly merge the queries from 3 places: wpnuxt-module + wpnuxt/blocks + user?
-    /* const queryOutputPath = resolve((nuxt.options.srcDir || nuxt.options.rootDir) + '/.queries/')
-
-    const userQueryPath = '~/extend/queries/'
-      .replace(/^(~~|@@)/, nuxt.options.rootDir)
-      .replace(/^(~|@)/, nuxt.options.srcDir)
-    const userQueryPathExists = existsSync(userQueryPath)
-
-    fs.cpSync(resolveRuntimeModule('./queries/'), queryOutputPath, { recursive: true })
-    if (userQueryPathExists) {
-      console.log('!!! Extending queries:', userQueryPath)
-      fs.cpSync(resolve(userQueryPath), queryOutputPath, { recursive: true })
-    }
-    console.log('!!! Copied merged queries in folder:', queryOutputPath) */
-
-    // TODO: check if we can do this and still use hasNuxtModule('@wpnuxt/blocks') in the wpnuct core module
-    /* await installModule('../../wpnuxt-module/src', {
-    }) */
 
     const componentsContext = { components: [] as Component[] }
     nuxt.hook('components:extend', (newComponents) => {

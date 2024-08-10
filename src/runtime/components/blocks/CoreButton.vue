@@ -8,7 +8,12 @@ defineProps<{
 
 <template>
   <UButton
-    :label="block.attributes.text"
     :to="block.attributes.url"
-  />
+    :target="block.attributes.linkTarget"
+    :class="block.attributes.cssClassName"
+    :rel="block.attributes.rel"
+    :style="block.attributes.style"
+  >
+    <span v-sanitize="block.attributes.text" />
+  </UButton>
 </template>
