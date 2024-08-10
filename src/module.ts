@@ -1,5 +1,5 @@
-import fs, { existsSync } from 'node:fs'
-import { defineNuxtModule, createResolver, addComponentsDir, addComponent, addTemplate, installModule } from '@nuxt/kit'
+import fs from 'node:fs'
+import { defineNuxtModule, createResolver, addComponentsDir, addComponent, addTemplate } from '@nuxt/kit'
 import { genDynamicImport } from 'knitwork'
 import type { Component } from '@nuxt/schema'
 import { name, version } from '../package.json'
