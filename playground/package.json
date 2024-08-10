@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "my-module-playground",
+  "name": "wpnuxt-blocks-playground",
   "type": "module",
   "scripts": {
     "dev": "nuxi dev",
@@ -8,6 +8,7 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
+    "@vernaillen/wpnuxt": "^1.0.0-edge.0",
     "nuxt": "^3.12.4"
   }
 }

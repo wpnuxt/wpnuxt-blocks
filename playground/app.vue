@@ -1,6 +1,6 @@
 <template>
   <div>
-    Nuxt module playground!
+    WPNuxt blocks
   </div>
 </template>
 
