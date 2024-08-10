@@ -5,7 +5,9 @@ import type { Component } from '@nuxt/schema'
 import { name, version } from '../package.json'
 
 // Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  enabled: boolean
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -14,7 +16,9 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'wpNuxtBlocks'
   },
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    enabled: true
+  },
   async setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
     const resolveRuntimeModule = (path: string) => resolve('./runtime', path)
