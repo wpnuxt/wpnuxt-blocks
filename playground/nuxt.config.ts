@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   modules: [
     '../src/module',
-    '@vernaillen/wpnuxt'
+    '@wpnuxt/core'
   ],
   wpNuxt: {
     wordpressUrl: 'https://wordpress.wpnuxt.com',
