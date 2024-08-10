@@ -26,7 +26,7 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "pnpm run lint && pnpm run test && pnpm run prepack; release-it --git.tagExclude='*[-edge]*'",
-    "release-edge": "pnpm run lint && pnpm run test && pnpm run prepack; release-it --no-github --preRelease=edge --config .release-it-edge.json",
+    "release-edge": "pnpm run lint && pnpm run test && pnpm run prepack; release-it --preRelease=edge --config .release-it-edge.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
