@@ -1,0 +1,17 @@
+#import '~/.queries/fragments/ContentNode.fragment.gql';
+#import '~/.queries/fragments/NodeWithFeaturedImage.fragment.gql';
+#import '~/.queries/fragments/EditorBlocks.fragment.gql';
+
+fragment Page on Page {
+  ...ContentNode
+  ...NodeWithFeaturedImage
+  content
+  isFrontPage
+  isPostsPage
+  isPreview
+  isPrivacyPage
+  isRestricted
+  isRevision
+  title
+  ...EditorBlocks
+}
