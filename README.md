@@ -3,9 +3,8 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
 
-A set of default components to render Gutenberg Blocks with the WPNuxt module
+A set of components to render Gutenberg Blocks with the WPNuxt module
 
 Allows to override each block component to be overriden by a custom component to have full control over how every Gutenberg Block is rendered in Nuxt.
 
