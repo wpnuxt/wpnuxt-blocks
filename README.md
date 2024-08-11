@@ -3,6 +3,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
+[![Nuxt][nuxt-src]][nuxt-href]
 
 A set of components to render Gutenberg Blocks with the WPNuxt module
 
@@ -65,3 +66,6 @@ That's it! You can now use WPNuxt Blocks in your Nuxt app ✨
 
 [license-src]: https://img.shields.io/npm/l/@wpnuxt/core.svg?style=flat&colorA=020420&colorB=00DC82
 [license-href]: https://npmjs.com/package/@wpnuxt/core
+
+[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
+[nuxt-href]: https://nuxt.com
