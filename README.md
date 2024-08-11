@@ -10,9 +10,8 @@ A set of components to render Gutenberg Blocks with the WPNuxt module
 Allows to override each block component to be overriden by a custom component to have full control over how every Gutenberg Block is rendered in Nuxt.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/wpnuxt/wpnuxt-blocks?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://wpnuxt.com) -->
-
+- [🏀 Online playground](https://stackblitz.com/github/wpnuxt/wpnuxt-blocks?file=playground%2Fapp%2Fpages%2F%5B...slug%5D.vue)
+- [📖 &nbsp;Documentation](https://wpnuxt.com)
 
 ## Quick Setup
 
