@@ -18,8 +18,8 @@ importers:
         specifier: ^2.18.4
         version: 2.18.4(change-case@4.1.2)(magicast@0.3.4)(rollup@4.20.0)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue@3.4.37(typescript@5.5.4))
       '@wpnuxt/core':
-        specifier: ^1.0.0-edge.4
-        version: 1.0.0-edge.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(consola@3.2.3)(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)(ioredis@5.4.1)(knitwork@1.1.0)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.5)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.5.4)))(pathe@1.1.2)(rollup@4.20.0)(scule@1.3.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue@3.4.37(typescript@5.5.4))
+        specifier: ^1.0.0-edge.5
+        version: 1.0.0-edge.5(@parcel/watcher@2.4.1)(@types/node@22.2.0)(consola@3.2.3)(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)(ioredis@5.4.1)(knitwork@1.1.0)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.5)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.5.4)))(pathe@1.1.2)(rollup@4.20.0)(scule@1.3.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue@3.4.37(typescript@5.5.4))
       knitwork:
         specifier: ^1.1.0
         version: 1.1.0
@@ -2238,8 +2238,8 @@ packages:
     resolution: {integrity: sha512-oOknAo8NvDnvj7P0N2ZHq/n3iK3wVtJHXwLVUsBBlc+u3UaNiL+bwXmS2OKu/pH+rIWMtOsXsTABrPjcCgEByg==}
     engines: {node: '>=18.0.0'}
 
-  '@wpnuxt/core@1.0.0-edge.4':
-    resolution: {integrity: sha512-baRLxuVXVjfRV+29kvcEF8f+O/5zs2ZOtSKTPSNqy5KyjY8WLlyingVu8S46jDaruZvp44kUX0VtxNusvXM2tg==}
+  '@wpnuxt/core@1.0.0-edge.5':
+    resolution: {integrity: sha512-EJTrZKHHLqbaE3pzwLuIb++LlzPn/hZdkgGPcMqcgy0+x/gZcZw5jceo8ioLJo3WtTV14gAxOU5JNF6MRTl2cg==}
     peerDependencies:
       consola: ^3.2.3
       graphql: ^16.9.0
@@ -9191,7 +9191,7 @@ snapshots:
       fast-querystring: 1.1.2
       tslib: 2.6.3
 
-  '@wpnuxt/core@1.0.0-edge.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(consola@3.2.3)(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)(ioredis@5.4.1)(knitwork@1.1.0)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.5)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.5.4)))(pathe@1.1.2)(rollup@4.20.0)(scule@1.3.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue@3.4.37(typescript@5.5.4))':
+  '@wpnuxt/core@1.0.0-edge.5(@parcel/watcher@2.4.1)(@types/node@22.2.0)(consola@3.2.3)(graphql-tag@2.12.6(graphql@16.9.0))(graphql@16.9.0)(ioredis@5.4.1)(knitwork@1.1.0)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.5)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.5.4)))(pathe@1.1.2)(rollup@4.20.0)(scule@1.3.0)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue@3.4.37(typescript@5.5.4))':
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.20.0)
       '@vueuse/nuxt': 10.11.1(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.2.0)(eslint@9.9.0(jiti@1.21.6))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.5)(typescript@5.5.4)(vite@5.4.0(@types/node@22.2.0)(terser@5.31.5))(vue-tsc@2.0.29(typescript@5.5.4)))(rollup@4.20.0)(vue@3.4.37(typescript@5.5.4))
