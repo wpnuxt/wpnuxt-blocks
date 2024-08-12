@@ -5,15 +5,13 @@ import type { EditorBlock } from '#wpnuxt/blocks'
 
 const manifest = await import('#wpnuxt/blocks').catch(() => ({}))
 
-const config = useRuntimeConfig()
-
 const props = defineProps<{
   block: EditorBlock
 }>()
 const findComponentToRender = async () => {
   // only process top level blocks
   if (props.block.parentClientId === null || props.block.parentClientId === undefined) {
-    if (config.public.wpNuxt.blocks && props.block.name) {
+    if (props.block.name) {
       const componentName = pascalCase(props.block.name)
       const componentImporter = manifest[componentName]
       if (typeof componentImporter === 'function') {
