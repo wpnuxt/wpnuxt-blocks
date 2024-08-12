@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { pascalCase } from 'scule'
-import { resolveComponent, useRuntimeConfig } from '#imports'
+import { resolveComponent } from '#imports'
 import type { EditorBlock } from '#wpnuxt/blocks'
 
 const manifest = await import('#wpnuxt/blocks').catch(() => ({}))
