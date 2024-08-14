@@ -27,11 +27,9 @@ const componentToRender = await findComponentToRender()
 </script>
 
 <template>
-  <div>
-    <component
-      :is="componentToRender"
-      v-if="componentToRender"
-      :block="block"
-    />
-  </div>
+  <component
+    :is="componentToRender"
+    v-if="componentToRender"
+    :block="block"
+  />
 </template>

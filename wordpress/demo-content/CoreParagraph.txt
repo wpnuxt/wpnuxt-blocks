@@ -1,0 +1,19 @@
+<!-- wp:paragraph -->
+<p>Default paragraph</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Paragraph with smaller text</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"large"} -->
+<p class="has-large-font-size">Paragraph with larger text</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p id="myanchor">Paragraph with html anchor</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->

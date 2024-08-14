@@ -1,26 +1,11 @@
 <script setup lang="ts">
-const { data: pages } = await useWPPages()
 const { data: posts } = await useWPPosts()
 </script>
 
 <template>
   <div>
     <header class="prose max-w-5xl mx-auto p-5">
-      Pages:
-      <span
-        v-for="page, index in pages"
-        :key="index"
-      >
-        <NuxtLink
-          v-if="page.slug"
-          :to="'/' + page.slug"
-        >
-          {{ page.title }}
-        </NuxtLink>
-        <span v-if="index !== pages.length - 1"> - </span>
-      </span>
-      <br>
-      Posts:
+      Components:
       <span
         v-for="post, index in posts"
         :key="index"

@@ -16,5 +16,6 @@ definePageMeta({
 <template>
   <NuxtLayout>
     <BlockRenderer :blocks="post?.editorBlocks" />
+    <StagingBanner />
   </NuxtLayout>
 </template>

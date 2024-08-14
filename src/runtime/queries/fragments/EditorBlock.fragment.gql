@@ -4,6 +4,7 @@
 #import '~/.queries/fragments/CoreImage.fragment.gql';
 #import '~/.queries/fragments/CoreParagraph.fragment.gql';
 #import '~/.queries/fragments/CoreQuote.fragment.gql';
+#import '~/.queries/fragments/CoreSpacer.fragment.gql';
 
 fragment EditorBlock on EditorBlock {
   apiVersion
@@ -20,4 +21,5 @@ fragment EditorBlock on EditorBlock {
   ...CoreImage
   ...CoreParagraph
   ...CoreQuote
+  ...CoreSpacer
 }
