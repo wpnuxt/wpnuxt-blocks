@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { getCssClasses } from '../../util'
 import type { CoreSpacer } from '#wpnuxt/blocks'
 
-defineProps<{
+const props = defineProps<{
   block: CoreSpacer
 }>()
+const cssClass = getCssClasses(props.block)
 </script>
 
 <template>
   <div
-    :class="block.attributes?.className"
+    :class="cssClass"
     :style="{
       height: block.attributes?.spacerHeight,
       width: block.attributes?.spacerWidth

@@ -60,6 +60,34 @@
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"100px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button" style="border-radius:100px">rounded button</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"metadata":"solid","className":"is-style-fill","style":{"variant":"link"},"fontSize":"medium","extendedSettings":{"variant":"solid"}} -->
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link wp-element-button">radius 0</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Variant Solid</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"metadata":"outline","extendedSettings":{"variant":"outline"}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Variant Outline</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"metadata":"ghost","extendedSettings":{"variant":"ghost"}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Variant Ghost</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"metadata":"soft","extendedSettings":{"variant":"soft"}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Variant Soft</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"metadata":"link","extendedSettings":{"variant":"link"}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Variant Link</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->

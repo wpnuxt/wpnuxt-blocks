@@ -3,7 +3,7 @@ export default defineAppConfig({
     primary: 'reefgold',
     gray: 'neutral',
     button: {
-      base: 'mb-1 mr-1'
+      base: 'mb-3 mr-1'
     }
   }
 })

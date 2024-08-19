@@ -3,7 +3,7 @@ import BlockComponent from './BlockComponent.vue'
 import type { EditorBlock } from '#wpnuxt/blocks'
 
 defineProps<{
-  blocks: EditorBlock[]
+  blocks: EditorBlock[] | undefined
 }>()
 </script>
 
