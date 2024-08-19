@@ -1,3 +1,5 @@
 ---
 title: CoreColumn
 ---
+
+coming soon...
