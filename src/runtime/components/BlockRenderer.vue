@@ -3,14 +3,14 @@ import BlockComponent from './BlockComponent.vue'
 import type { NodeWithEditorBlocksFragment } from '#build/graphql-operations'
 
 defineProps<{
-  post: NodeWithEditorBlocksFragment
+  node: NodeWithEditorBlocksFragment
 }>()
 </script>
 
 <template>
   <div>
     <BlockComponent
-      v-for="block, index in post.editorBlocks"
+      v-for="block, index in node.editorBlocks"
       :key="index"
       :block="block"
     />
