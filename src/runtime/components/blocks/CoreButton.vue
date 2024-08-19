@@ -22,8 +22,8 @@ if (props.block.attributes?.metadata) {
     :rel="block.attributes.rel"
     :style="block.attributes.style"
     :variant
-    :class="getCssClasses(props.block)"
-    :size="convertFontSize(props.block.attributes?.fontSize, '', 'md')"
+    :class="getCssClasses(block)"
+    :size="convertFontSize(block.attributes?.fontSize, '', 'md')"
   >
     <span v-sanitize="block.attributes.text" />
   </UButton>
