@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import BlockComponent from './BlockComponent.vue'
-import type { EditorBlock } from '#wpnuxt/blocks'
+import type { NodeWithEditorBlocksFragment } from '#build/graphql-operations'
 
 defineProps<{
-  blocks: EditorBlock[] | undefined
+  post: NodeWithEditorBlocksFragment
 }>()
 </script>
 
 <template>
   <div>
     <BlockComponent
-      v-for="block, index in blocks"
+      v-for="block, index in post.editorBlocks"
       :key="index"
       :block="block"
     />

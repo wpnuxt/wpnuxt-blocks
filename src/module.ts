@@ -29,11 +29,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     await installModule('@nuxt/ui')
     await installModule('@nuxt/image', {
+      // TODO: get wordpressUrl from @wpnuxt/core options
       domains: ['wordpress.wpnuxt.com']
     })
 
     addComponentsDir({
-      path: resolveRuntimeModule('./components/blocks'),
+      path: resolveRuntimeModule('./components'),
       pathPrefix: false,
       prefix: '',
       global: true
@@ -55,13 +56,9 @@ export default defineNuxtModule<ModuleOptions>({
         })
       }
     }
-    addComponent({ name: 'BlockComponent', filePath: resolveRuntimeModule('./components/BlockComponent') })
-    addComponent({ name: 'BlockInfo', filePath: resolveRuntimeModule('./components/BlockInfo') })
-    addComponent({ name: 'BlockRenderer', filePath: resolveRuntimeModule('./components/BlockRenderer') })
-
     const componentsContext = { components: [] as Component[] }
     nuxt.hook('components:extend', (newComponents) => {
-      const moduleBlocksDir = resolveRuntimeModule('./components/blocks')
+      const moduleBlocksDir = resolveRuntimeModule('./components')
       // TODO: support layers
       const userBlocksDir = (nuxt.options.srcDir || nuxt.options.rootDir) + '/components/blocks'
       componentsContext.components = newComponents.filter((c) => {

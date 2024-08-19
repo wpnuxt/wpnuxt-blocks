@@ -1,6 +1,6 @@
 #import '~/.queries/fragments/EditorBlock.fragment.gql';
 
-fragment EditorBlocks on NodeWithEditorBlocks {
+fragment NodeWithEditorBlocks on NodeWithEditorBlocks {
   editorBlocks {
     ...EditorBlock
     innerBlocks {
