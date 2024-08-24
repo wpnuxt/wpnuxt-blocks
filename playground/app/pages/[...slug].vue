@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'nuxt/app'
-import type { PostFragment, PageFragment } from '#graphql-operations';
+import type { PostFragment, PageFragment } from '#graphql-operations'
 
 const route = useRoute()
 const post = ref<PostFragment | PageFragment | undefined>()
