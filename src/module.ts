@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { promises as fsp } from 'node:fs'
 import { defineNuxtModule, installModule, createResolver, addComponentsDir, addTemplate } from '@nuxt/kit'
 import { genDynamicImport } from 'knitwork'
@@ -19,7 +20,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     enabled: true
   },
-  async setup(_options, nuxt) {
+  async setup(_options: any, nuxt: any) {
     const { resolve } = createResolver(import.meta.url)
     const resolveRuntimeModule = (path: string) => resolve('./runtime', path)
 
@@ -46,7 +47,7 @@ export default defineNuxtModule<ModuleOptions>({
       const blockComponents = resolve(srcDir, 'components/blocks')
       const dirStat = await fsp.stat(blockComponents).catch(() => null)
       if (dirStat && dirStat.isDirectory()) {
-        nuxt.hook('components:dirs', (dirs) => {
+        nuxt.hook('components:dirs', (dirs: any) => {
           dirs.unshift({
             path: blockComponents,
             global: true,
@@ -57,11 +58,11 @@ export default defineNuxtModule<ModuleOptions>({
       }
     }
     const componentsContext = { components: [] as Component[] }
-    nuxt.hook('components:extend', (newComponents) => {
+    nuxt.hook('components:extend', (newComponents: Component[]) => {
       const moduleBlocksDir = resolveRuntimeModule('./components')
       // TODO: support layers
       const userBlocksDir = (nuxt.options.srcDir || nuxt.options.rootDir) + '/components/blocks'
-      componentsContext.components = newComponents.filter((c) => {
+      componentsContext.components = newComponents.filter((c: Component) => {
         if (c.filePath.startsWith(moduleBlocksDir) || c.filePath.startsWith(userBlocksDir)) {
           return true
         }
