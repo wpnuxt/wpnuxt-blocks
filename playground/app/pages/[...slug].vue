@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'nuxt/app'
+import type { PostFragment, PageFragment } from '#graphql-operations';
 
 const route = useRoute()
 const post = ref<PostFragment | PageFragment | undefined>()
@@ -15,7 +16,7 @@ definePageMeta({
 
 <template>
   <NuxtLayout>
-    <BlockRenderer :blocks="post?.editorBlocks" />
+    <WPContent :node="post" />
     <StagingBanner />
   </NuxtLayout>
 </template>
