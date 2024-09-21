@@ -24,9 +24,11 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url)
     const resolveRuntimeModule = (path: string) => resolve('./runtime', path)
 
-    console.log('!!! Setup @wpnuxt/blocks module')
+    console.log('::: Setting up @wpnuxt/blocks module')
 
     nuxt.options.alias['#wpnuxt/blocks'] = resolve(nuxt.options.buildDir, 'wpnuxt/blocks')
+
+    // TODO: should we check if @wpnuxt/core is installed?
 
     await installModule('@nuxt/ui')
     await installModule('@nuxt/image', {
